@@ -38,8 +38,9 @@ phases:
       - kubectl apply -f simple_jwt_api.yml 
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
-  files:  my-subdirectory/my-file.jar
-  name: myApp
+    files:
+        - ./build_output/**
+    name: build-demo2-artifacts
 env:
   parameter-store:         
     JWT_SECRET: JWT_SECRET

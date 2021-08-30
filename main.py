@@ -25,6 +25,7 @@ def _logger():
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 
+
     log = logging.getLogger(__name__)
     log.setLevel(LOG_LEVEL)
 
